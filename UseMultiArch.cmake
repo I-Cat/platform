@@ -20,9 +20,9 @@ if ("${CMAKE_SYSTEM_NAME}" MATCHES "Linux" AND
   if (EXISTS "/etc/debian_version")
 	set (_libdir_def "lib/${CMAKE_LIBRARY_ARCHITECTURE}")
 	set (_libdir_noarch "lib")
-  elseif (EXISTS "/etc/fedora-release" OR
-          EXISTS "/etc/redhat-release" OR
-          EXISTS "/etc/slackware-version" OR
+  elseif (EXISTS "/etc/fedora-release" ON
+          EXISTS "/etc/redhat-release" ON
+          EXISTS "/etc/slackware-version" ON
           EXISTS "/etc/gentoo-release")
 	# 64-bit system?
 	if (CMAKE_SIZEOF_VOID_P EQUAL 8)
